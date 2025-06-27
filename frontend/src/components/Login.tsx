@@ -16,7 +16,7 @@ const Login = () => {
                   name="tipoLogin"
                   id="tipoAdmin"
                   className="ms-1"
-                  value={'admin'}
+                  value={"admin"}
                   onChange={(e) => setRadio(e.target.value)}
                 />
               </div>
@@ -27,34 +27,52 @@ const Login = () => {
                   name="tipoLogin"
                   id="tipoEleitor"
                   className="ms-1"
-                  value={'eleitor'}
+                  value={"eleitor"}
                   onChange={(e) => setRadio(e.target.value)}
                 />
               </div>
             </div>
 
-            {radio == 'admin' && (
-                <div className="space-y-4">
+            {radio == "admin" && (
+              <div className="space-y-4">
                 <div>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" className="ms-5 border border-neutral-700"/>
+                  <label htmlFor="email">Email:</label>
+                  <input
+                    type="email"
+                    className="ms-5 border border-neutral-700"
+                  />
                 </div>
                 <div>
-                    <label htmlFor="senha">Senha:</label>
-                    <input type="password" className="ms-3 border border-neutral-700" />
+                  <label htmlFor="senha">Senha:</label>
+                  <input
+                    type="password"
+                    className="ms-3 border border-neutral-700"
+                  />
                 </div>
-              
-            </div>
+                <div className="flex justify-center">
+                  <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-60">
+                    Entrar
+                  </button>
+                </div>
+              </div>
             )}
 
-            {radio == 'eleitor' && (
+            {radio == "eleitor" && (
+              <div>
                 <div>
-                <label htmlFor="codigo">Código:</label>
-                <input type="text" name="codigo" id="codigo" className="ms-3 border border-neutral-700" />
-            </div>
+                  <label htmlFor="codigo">Código:</label>
+                  <input
+                    type="text"
+                    name="codigo"
+                    id="codigo"
+                    className="ms-3 border border-neutral-700"
+                  />
+                </div>
+                <div className='mt-3'>
+                    <button className='bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-60'>Acessar Enquete</button>
+                </div>
+              </div>
             )}
-            
-            
           </div>
         </div>
       </>
