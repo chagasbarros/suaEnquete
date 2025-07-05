@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 const Login = () => {
     
     const [radio, setRadio] = useState('')
